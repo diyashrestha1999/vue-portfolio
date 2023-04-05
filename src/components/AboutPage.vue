@@ -119,6 +119,22 @@
             </v-row>
           </v-card>
         </v-col>
+        <v-col cols="6">
+          <v-card class="bg-blue-lighten-5 pa-4" flat>
+            <v-row no-gutters>
+              <v-col cols="2" class="text-right">
+                <v-icon class="mt-3">mdi-xml</v-icon>
+              </v-col>
+              <v-col cols="10">
+                <v-card-title>Ui/Ux Design </v-card-title>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam euismod volutpat.
+                </v-card-text>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
       </v-row>
     </v-card-text>
     <v-spacer></v-spacer>
