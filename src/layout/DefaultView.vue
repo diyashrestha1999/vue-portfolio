@@ -13,7 +13,7 @@
             ></v-icon>
           </v-btn>
         </v-row>
-        <v-row class="bg-red-accent-3" style="margin-top: 220 px">
+        <v-row class="bg-red-accent-3" style="margin-top: 220px">
           <v-col cols="4" class="bg-blue-grey-darken-1">
             <v-card style="border-radius: 20px">
               <v-list rounded="lg">
