@@ -1,23 +1,23 @@
 <template>
-  <v-card class="pa-8 rounded-xl">
+  <v-card class="pa-8" style="border-radius: 1em">
     <v-card-title>
       <h2 class="after-effect after:left-52">About Me</h2>
     </v-card-title>
     <v-spacer></v-spacer>
-    <v-card-text>
-      I'm Front-end developer from kathmandu, Australia, working in web
+    <v-card-text class="text-blue-grey-darken-2">
+      I'm Creative Front-end developer from kathmandu, Australia, working in web
       development and print media. I enjoy turning complex problems into simple,
       beautiful and intuitive designs. My aim is to bring across your message
       and identity in the most creative way. I created web design for many
       famous brand companies.
     </v-card-text>
-    <v-card-text
-      >My aim is to bring across your message and identity in the most creative
+    <v-card-text class="text-blue-grey-darken-2">
+      My aim is to bring across your message and identity in the most creative
       way. I created web design for many famous brand companies.
     </v-card-text>
     <v-spacer></v-spacer>
     <v-card-title>
-      <h2 class="after-effect after:left-52">What I do!</h2>
+      <h2 class="after-effect">What I do!</h2>
     </v-card-title>
     <v-spacer></v-spacer>
     <v-card-text>
@@ -131,4 +131,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.after-effect {
+  font-family: Roboto Slab, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+</style>
