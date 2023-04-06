@@ -1,7 +1,7 @@
 <template>
   <v-app class="bg">
-    <v-main>
-      <v-container class="notice-side-view">
+    <v-main class="notice-side-view">
+      <v-container class="notice-side-view container justify-space-between">
         <v-row style="margin-top: 20px">
           <h1 class="text-red-darken-1">Greetings</h1>
           <v-spacer></v-spacer>
@@ -47,7 +47,7 @@
               </div>
             </div>
           </v-col>
-          <v-col cols="8" class="notice-side-view">
+          <v-col cols="8">
             <div class="d-flex flex-row-reverse mb-10">
               <v-card class="d-flex flex px-8 py-7" style="border-radius: 16px">
                 <v-col
@@ -125,7 +125,9 @@ export default {
 }
 
 .wrapper {
-  position: relative;
+  position: sticky;
+  top: 11rem;
+  /*position: relative;*/
   /*background: red;*/
   border-radius: 20px;
 }
@@ -156,5 +158,8 @@ export default {
   top: -140px;
   border-radius: 20px;
   height: 240px;
+}
+.container {
+  max-width: 1280px;
 }
 </style>
