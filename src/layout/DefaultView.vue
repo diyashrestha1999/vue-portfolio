@@ -1,8 +1,8 @@
 <template>
-  <v-app class="bg-red-darken-2 bg">
+  <v-app class="bg">
     <v-main>
       <v-container class="notice-side-view">
-        <v-row class="bg-blue-grey">
+        <v-row style="margin-top: 20px">
           <h1 class="text-red-darken-1">Greetings</h1>
           <v-spacer></v-spacer>
           <v-btn icon color="white" size="small">
@@ -13,24 +13,42 @@
             ></v-icon>
           </v-btn>
         </v-row>
-        <v-row class="bg-red-accent-3" style="margin-top: 220px">
-          <v-col cols="4" class="bg-blue-grey-darken-1">
-            <v-card style="border-radius: 20px">
-              <v-list rounded="lg">
-                <v-list-item v-for="n in 5" :key="n" link>
-                  <v-list-item-title> List Item {{ n }} </v-list-item-title>
-                </v-list-item>
+        <v-row style="margin-top: 220px">
+          <v-col cols="4">
+            <div class="wrapper">
+              <div class="grey darken-4 green-box"></div>
 
-                <v-divider class="my-2"></v-divider>
-
-                <v-list-item link color="grey-lighten-4">
-                  <v-list-item-title> Refresh </v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-card>
+              <div class="dashed-box"></div>
+              <div class="box">
+                <v-col class="text-center">
+                  <h2>Diya Shrestha</h2>
+                  <v-card-subtitle>Front-end Developer</v-card-subtitle>
+                  <div class="d-flex justify-center">
+                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
+                      <v-icon size="large"> mdi-check-circle </v-icon>
+                    </v-btn>
+                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
+                      <v-icon class="px-0 mx-0" size="large">
+                        mdi-check-circle
+                      </v-icon>
+                    </v-btn>
+                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
+                      <v-icon class="px-0 mx-0" size="large">
+                        mdi-check-circle
+                      </v-icon>
+                    </v-btn>
+                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
+                      <v-icon class="px-0 mx-0" size="large">
+                        mdi-check-circle
+                      </v-icon>
+                    </v-btn>
+                  </div>
+                </v-col>
+              </div>
+            </div>
           </v-col>
           <v-col cols="8" class="notice-side-view">
-            <div class="d-flex flex-row-reverse mb-10 overflow-auto">
+            <div class="d-flex flex-row-reverse mb-10">
               <v-card class="d-flex flex px-8 py-7" style="border-radius: 16px">
                 <v-col
                   v-for="item in 5"
@@ -104,5 +122,50 @@ export default {
 }
 .rotate {
   transform: rotate(330deg);
+}
+.avatar {
+  width: 240px;
+
+  height: 240px;
+  /*--tw-translate-x: -50%;*/
+  transform: translate(var(--tw-translate-x));
+  /*margin-top: -140px;*/
+  border-radius: 20px;
+  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+.wrapper {
+  position: relative;
+  /*background: red;*/
+  border-radius: 20px;
+}
+
+.dashed-box {
+  position: relative;
+  z-index: 1;
+  height: 7em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: white;
+}
+.box {
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: white;
+}
+.green-box {
+  background: url("@/assets/avatar.jpg") no-repeat center center;
+  background-size: cover;
+
+  position: absolute;
+  z-index: 2;
+  width: 240px;
+  left: 18%;
+  top: -140px;
+  border-radius: 20px;
+  height: 240px;
 }
 </style>
