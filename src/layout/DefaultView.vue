@@ -3,7 +3,7 @@
     <v-main class="notice-side-view">
       <v-container class="notice-side-view container justify-space-between">
         <v-row style="margin-top: 20px">
-          <h1 class="text-red-darken-1">Greetings</h1>
+          <div class="text-red-darken-1 logo"></div>
           <v-spacer></v-spacer>
           <v-btn icon color="white" size="small">
             <v-icon
@@ -16,32 +16,29 @@
         <v-row style="margin-top: 220px">
           <v-col cols="4">
             <div class="wrapper">
-              <div class="grey darken-4 green-box"></div>
+              <div class="green-box elevation-10"></div>
 
               <div class="dashed-box"></div>
               <div class="box">
                 <v-col class="text-center">
-                  <h2>Diya Shrestha</h2>
-                  <v-card-subtitle>Front-end Developer</v-card-subtitle>
-                  <div class="d-flex justify-center">
-                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
-                      <v-icon size="large"> mdi-check-circle </v-icon>
-                    </v-btn>
-                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
-                      <v-icon class="px-0 mx-0" size="large">
-                        mdi-check-circle
-                      </v-icon>
-                    </v-btn>
-                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
-                      <v-icon class="px-0 mx-0" size="large">
-                        mdi-check-circle
-                      </v-icon>
-                    </v-btn>
-                    <v-btn class="bg-grey-lighten-3 ma-2" size="small" flat>
-                      <v-icon class="px-0 mx-0" size="large">
-                        mdi-check-circle
-                      </v-icon>
-                    </v-btn>
+                  <h2 class="my-2">Diya Shrestha</h2>
+                  <span class="w-50 rounded-lg px-4 py-1 my-2 text-grey">
+                    Front-end Developer
+                  </span>
+                  <div class="d-flex justify-center my-2">
+                    <vue-btn
+                      icon="mdi-instagram"
+                      color="pink-lighten-2"
+                    ></vue-btn>
+                    <vue-btn
+                      icon="mdi-linkedin"
+                      color="blue-darken-3"
+                    ></vue-btn>
+                    <vue-btn
+                      icon="mdi-facebook"
+                      color="blue-darken-2"
+                    ></vue-btn>
+                    <vue-btn icon="mdi-github" color="amber-accent-4"></vue-btn>
                   </div>
                 </v-col>
               </div>
@@ -49,24 +46,10 @@
           </v-col>
           <v-col cols="8">
             <div class="d-flex flex-row-reverse mb-10">
-              <v-card class="d-flex flex px-8 py-7" style="border-radius: 16px">
-                <v-col
-                  v-for="item in 5"
-                  :key="item"
-                  class="bg-red-darken-2 text-center rounded-lg mx-2"
-                >
-                  <v-icon size="30">mdi-account-outline</v-icon>
-                  <p class="">About</p>
-                </v-col>
-
-                <!--                <v-col-->
-                <!--                  class="bg-red-darken-2 ma-4 pa-3 text-center rounded-lg"-->
-                <!--                  @click="$router.push({ name: 'resume' })"-->
-                <!--                >-->
-                <!--                  <v-icon size="30">mdi-account-outline</v-icon>-->
-                <!--                  <p>Second</p>-->
-                <!--                </v-col>-->
-              </v-card>
+              <vue-tabs
+                icon="mdi-file-document-outline"
+                label="Example"
+              ></vue-tabs>
             </div>
             <div><about-page></about-page></div>
           </v-col>
@@ -78,12 +61,16 @@
 
 <script>
 import AboutPage from "@/components/AboutPage.vue";
+import VueBtn from "@/components/common/VueBtn.vue";
+import VueTabs from "@/components/common/VueTabs.vue";
 // import AppBar from "@/components/AppBar.vue";
 // import MainContainer from "@/components/MainContainer.vue";
 
 export default {
   name: "DefaultVew",
   components: {
+    VueTabs,
+    VueBtn,
     // AppBar,
     AboutPage,
     // MainContainer,
@@ -135,7 +122,7 @@ export default {
 .dashed-box {
   position: relative;
   z-index: 1;
-  height: 7em;
+  height: 6.5em;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background: white;
@@ -161,5 +148,14 @@ export default {
 }
 .container {
   max-width: 1280px;
+}
+.logo {
+  /*background: url("@/assets/logo1.png") no-repeat center center;*/
+  /*width: 100px;*/
+  /*height: 50px;*/
+}
+.tab {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 246 246 / var(--tw-bg-opacity));
 }
 </style>
