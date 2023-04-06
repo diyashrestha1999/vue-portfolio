@@ -123,17 +123,6 @@ export default {
 .rotate {
   transform: rotate(330deg);
 }
-.avatar {
-  width: 240px;
-
-  height: 240px;
-  /*--tw-translate-x: -50%;*/
-  transform: translate(var(--tw-translate-x));
-  /*margin-top: -140px;*/
-  border-radius: 20px;
-  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
-    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-}
 
 .wrapper {
   position: relative;
