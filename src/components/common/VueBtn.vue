@@ -1,5 +1,14 @@
 <template>
-  <v-icon size="small" class="socialbtn" :color="color"> {{ icon }} </v-icon>
+  <v-hover v-slot:default="{ isHovering, props }">
+    <v-icon
+      v-bind="props"
+      size="small"
+      class="socialbtn"
+      :color="!isHovering ? color : 'white'"
+    >
+      {{ icon }}
+    </v-icon>
+  </v-hover>
 </template>
 
 <script>
@@ -24,7 +33,12 @@ export default {
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   margin: 6px;
-  background-color: rgb(243 246 246 / var(--tw-bg-opacity));
+  background: rgb(243 246 246 / var(--tw-bg-opacity));
+  transition: 0.2s ease-in-out;
+}
+.socialbtn:hover {
+  background: linear-gradient(0.25turn, #fa5252, #dd2476);
+  color: white;
 }
 /*.socialbtn:hover {*/
 /*  --tw-gradient-from: #fa5252;*/
