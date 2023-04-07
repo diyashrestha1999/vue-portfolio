@@ -1,6 +1,6 @@
 <template>
   <v-app class="bg">
-    <v-main class="notice-side-view">
+    <v-main>
       <v-container class="notice-side-view container justify-space-between">
         <v-row style="margin-top: 20px">
           <div class="text-red-darken-1 logo"></div>
@@ -17,7 +17,6 @@
           <v-col cols="4">
             <div class="wrapper">
               <div class="green-box elevation-10"></div>
-
               <div class="dashed-box"></div>
               <div class="box">
                 <v-col class="text-center">
@@ -46,12 +45,32 @@
           </v-col>
           <v-col cols="8">
             <div class="d-flex flex-row-reverse mb-10">
-              <vue-tabs
-                icon="mdi-file-document-outline"
-                label="Example"
-              ></vue-tabs>
+              <v-card class="d-flex flex px-8 py-7" style="border-radius: 16px">
+                <vue-tabs
+                  icon="mdi-account-outline"
+                  label="About"
+                  route="about"
+                ></vue-tabs>
+                <vue-tabs
+                  icon="mdi-file-document-outline"
+                  label="Resume"
+                  route="resume"
+                ></vue-tabs>
+                <vue-tabs
+                  icon="mdi-briefcase-outline"
+                  label="Work"
+                  route="work"
+                ></vue-tabs>
+                <vue-tabs
+                  icon="mdi-cellphone-sound"
+                  label="Contact"
+                  route="contact"
+                ></vue-tabs>
+              </v-card>
             </div>
-            <div><about-page></about-page></div>
+            <div>
+              <router-view></router-view>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -60,19 +79,19 @@
 </template>
 
 <script>
-import AboutPage from "@/components/AboutPage.vue";
+// import AboutPage from "@/components/AboutPage.vue";
 import VueBtn from "@/components/common/VueBtn.vue";
 import VueTabs from "@/components/common/VueTabs.vue";
 // import AppBar from "@/components/AppBar.vue";
 // import MainContainer from "@/components/MainContainer.vue";
 
 export default {
-  name: "DefaultVew",
+  name: "DefaultView",
   components: {
     VueTabs,
     VueBtn,
     // AppBar,
-    AboutPage,
+    // AboutPage,
     // MainContainer,
   },
 };
@@ -83,7 +102,7 @@ export default {
   height: 100vh;
   min-height: 200px;
   overflow: auto;
-  position: sticky;
+  /*position: sticky;*/
   /*position: -webkit-sticky;*/
   scrollbar-width: none;
 }
