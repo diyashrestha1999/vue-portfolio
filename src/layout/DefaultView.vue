@@ -1,12 +1,15 @@
 <template>
   <v-app class="bg">
+    <app-bar v-if="$vuetify.display.md"></app-bar>
+
     <v-main>
       <v-container class="notice-side-view container justify-space-between">
-        <app-bar></app-bar>
+        <app-bar v-if="$vuetify.display.lg"></app-bar>
         <v-row style="margin-top: 220px">
           <profile-left-box></profile-left-box>
           <v-col cols="8">
-            <tab-router></tab-router>
+            {{ this.$vuetify.display.md }}
+            <tab-router v-if="$vuetify.display.lg"></tab-router>
             <div>
               <router-view></router-view>
             </div>

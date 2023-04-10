@@ -1,6 +1,6 @@
 <template>
   <v-col cols="4">
-    <div class="wrapper">
+    <div class="wrapper w-100">
       <div class="green-box elevation-10"></div>
       <div class="dashed-box"></div>
       <div class="box">
