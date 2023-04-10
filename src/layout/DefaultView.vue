@@ -5,16 +5,16 @@
     <v-main>
       <v-container class="notice-side-view container justify-space-between">
         <app-bar v-if="$vuetify.display.lg"></app-bar>
-        <v-row style="margin-top: 220px">
-          <profile-left-box></profile-left-box>
-          <v-col cols="8">
-            {{ this.$vuetify.display.md }}
-            <tab-router v-if="$vuetify.display.lg"></tab-router>
-            <div>
+        <template v-if="$vuetify.display.lg">
+          <v-row style="margin-top: 220px">
+            <profile-left-box v-if="$vuetify.display.lg"></profile-left-box>
+            <v-col cols="8">
+              <tab-router v-if="$vuetify.display.lg"></tab-router>
               <router-view></router-view>
-            </div>
-          </v-col>
-        </v-row>
+            </v-col>
+          </v-row>
+        </template>
+        <router-view v-if="$vuetify.display.md"></router-view>
       </v-container>
     </v-main>
   </v-app>

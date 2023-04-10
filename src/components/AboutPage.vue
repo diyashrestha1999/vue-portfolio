@@ -1,5 +1,9 @@
 <template>
-  <v-card class="pa-8" style="border-radius: 1em">
+  <v-card
+    class="pa-8"
+    style="border-radius: 1em"
+    :class="{ 'w-100': $vuetify.display.md }"
+  >
     <v-card-title>
       <h2 class="after-effect after:left-52">About Me</h2>
     </v-card-title>

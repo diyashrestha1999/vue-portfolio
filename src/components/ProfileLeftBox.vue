@@ -1,7 +1,7 @@
 <template>
   <v-col cols="4">
     <div class="wrapper w-100">
-      <div class="green-box elevation-10"></div>
+      <div class="img-box elevation-10"></div>
       <div class="dashed-box"></div>
       <div class="box">
         <v-col class="text-center">
@@ -38,14 +38,14 @@ export default {
   /*background: red;*/
   border-radius: 20px;
 }
-.green-box {
+.img-box {
   background: url("@/assets/avatar.jpg") no-repeat center center;
   background-size: cover;
 
   position: absolute;
   z-index: 2;
   width: 240px;
-  left: 18%;
+  left: 20%;
   top: -140px;
   border-radius: 20px;
   height: 240px;
