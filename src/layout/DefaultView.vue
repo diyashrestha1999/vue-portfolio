@@ -1,10 +1,12 @@
 <template>
   <v-app class="bg">
-    <app-bar v-if="$vuetify.display.md"></app-bar>
-
     <v-main>
-      <v-container class="notice-side-view container justify-space-between">
-        <app-bar v-if="$vuetify.display.lg"></app-bar>
+      <app-bar v-if="$vuetify.display.md"></app-bar>
+      <v-container
+        class="notice-side-view container justify-space-between"
+        v-if="$vuetify.display.lg"
+      >
+        <app-bar></app-bar>
         <v-row style="margin-top: 220px">
           <profile-left-box></profile-left-box>
           <v-col cols="8">
@@ -16,6 +18,13 @@
           </v-col>
         </v-row>
       </v-container>
+
+      <template v-if="$vuetify.display.md">
+        <router-view></router-view>
+        <v-footer class="d-flex justify-center">
+          © 2023 Diya Shrestha.
+        </v-footer>
+      </template>
     </v-main>
   </v-app>
 </template>
@@ -73,9 +82,6 @@ export default {
     no-repeat center center;
   background-size: cover;
   background-color: red;
-}
-.rotate {
-  transform: rotate(330deg);
 }
 
 .container {
