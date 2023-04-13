@@ -37,6 +37,7 @@
           <vue-btn icon="mdi-github" color="amber-accent-4"></vue-btn>
         </div>
       </v-col>
+      <side-nav-list></side-nav-list>
     </div>
     <v-spacer></v-spacer>
     <v-card-title>
@@ -182,10 +183,11 @@
 
 <script>
 import VueBtn from "@/components/common/VueBtn.vue";
+import SideNavList from "@/components/common/SideNavList.vue";
 
 export default {
   name: "AboutPage",
-  components: { VueBtn },
+  components: { SideNavList, VueBtn },
 };
 </script>
 

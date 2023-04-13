@@ -16,27 +16,7 @@
             <vue-btn icon="mdi-github" color="amber-accent-4"></vue-btn>
           </div>
         </v-col>
-        <v-col class="py-0 my-0">
-          <v-list class="mx-4 py-0">
-            <template v-for="n in 4" :key="n">
-              <v-list-item variant="tonal">
-                <template v-slot:prepend>
-                  <v-btn size="small" height="50px">
-                    <v-icon size="x-large">mdi-format-align-left</v-icon>
-                  </v-btn>
-                </template>
-                <v-list-item-title
-                  v-text="'heheh'"
-                  class="ml-3"
-                ></v-list-item-title>
-              </v-list-item>
-              <v-divider></v-divider>
-            </template>
-          </v-list>
-        </v-col>
-        <v-col class="text-center">
-          <v-btn color="red" class="my-4 rounded-xl">View My Cv</v-btn>
-        </v-col>
+        <side-nav-list></side-nav-list>
       </v-card>
     </div>
   </v-col>
@@ -44,10 +24,11 @@
 
 <script>
 import VueBtn from "@/components/common/VueBtn.vue";
+import SideNavList from "@/components/common/SideNavList.vue";
 
 export default {
   name: "ProfileLeftBox",
-  components: { VueBtn },
+  components: { SideNavList, VueBtn },
 };
 </script>
 

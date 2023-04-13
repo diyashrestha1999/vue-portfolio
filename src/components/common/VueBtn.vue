@@ -5,6 +5,7 @@
       size="small"
       class="socialbtn"
       :color="!isHovering ? color : 'white'"
+      :class="btnClass"
     >
       {{ icon }}
     </v-icon>
@@ -15,6 +16,9 @@
 export default {
   name: "VueBtn",
   props: {
+    btnClass: {
+      type: String,
+    },
     icon: {
       type: String,
       Required: true,

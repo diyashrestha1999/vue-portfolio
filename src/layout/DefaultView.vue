@@ -10,7 +10,6 @@
         <v-row style="margin-top: 220px">
           <profile-left-box></profile-left-box>
           <v-col cols="8">
-            {{ this.$vuetify.display.md }}
             <tab-router v-if="$vuetify.display.lg"></tab-router>
             <div>
               <router-view></router-view>
