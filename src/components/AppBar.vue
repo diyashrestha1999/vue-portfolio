@@ -8,6 +8,7 @@
       'bg-grey-lighten-3': $vuetify.display.md,
     }"
   >
+    --- {{ theme.global.current.value.dark }}
     <div class="text-red-darken-1 logo"></div>
     <v-spacer></v-spacer>
     <v-hover v-slot="{ isHovering, props }">
@@ -83,17 +84,25 @@
 
 <script>
 import { useTheme } from "vuetify";
+import { useStore } from "vuex";
 export default {
   name: "AppBar",
   setup() {
     const theme = useTheme();
+    const store = useStore();
+    const isDark = localStorage.getItem("isDarkMode") === "true";
+    theme.global.name.value = isDark ? "dark" : "light";
+    store.commit("setDarkMode", isDark);
 
     return {
       theme,
-      toggleDarkMode: () =>
-        (theme.global.name.value = theme.global.current.value.dark
+      toggleDarkMode: () => {
+        theme.global.name.value = theme.global.current.value.dark
           ? "light"
-          : "dark"),
+          : "dark";
+        store.commit("setDarkMode", theme.global.current.value.dark);
+        localStorage.setItem("isDarkMode", theme.global.current.value.dark);
+      },
     };
   },
   data() {

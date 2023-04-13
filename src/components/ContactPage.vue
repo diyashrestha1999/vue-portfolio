@@ -1,4 +1,6 @@
-<template>Contact</template>
+<template>
+  <h1>This is Contact page(In Progress)</h1>
+</template>
 
 <script>
 export default {

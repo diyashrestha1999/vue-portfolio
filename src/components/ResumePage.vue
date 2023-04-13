@@ -1,31 +1,9 @@
 <template>
-  <div
-    class="background"
-    @mouseover="isHovered = true"
-    @mouseout="isHovered = false"
-  >
-    <h1>Hover over the background to see the transition effect</h1>
-  </div>
+  <h1>This is Resume page(In Progress)</h1>
 </template>
 
-<style>
-.background {
-  background-image: url("@/assets/img_1.png");
-
-  transition: background-image 1s;
-}
-
-.background:hover {
-  background-image: url("@/assets/img.png");
-}
-</style>
+<style></style>
 
 <script>
-export default {
-  data() {
-    return {
-      isHovered: false,
-    };
-  },
-};
+export default {};
 </script>

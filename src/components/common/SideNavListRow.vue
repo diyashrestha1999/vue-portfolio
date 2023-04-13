@@ -2,11 +2,8 @@
   <v-row class="mx-6">
     <v-col class="px-0 py-1">
       <v-row no-gutters class="d-flex justify-start align-center my-1">
-        <vue-btn
-          :icon="btnIcon"
-          :color="iconColor"
-          btnClass="elevation-2 bg-white"
-        ></vue-btn>
+        <list-vue-btn :icon="btnIcon" :color="iconColor"></list-vue-btn>
+
         <v-col cols="8">
           <v-list-item-subtitle>{{ subtitle }}</v-list-item-subtitle>
           <v-list-item-title>{{ title }}</v-list-item-title>
@@ -18,11 +15,11 @@
 </template>
 
 <script>
-import VueBtn from "@/components/common/VueBtn.vue";
+import ListVueBtn from "@/components/common/ListVueBtn.vue";
 
 export default {
   name: "SideNavListRow",
-  components: { VueBtn },
+  components: { ListVueBtn },
   props: {
     subtitle: {
       type: String,

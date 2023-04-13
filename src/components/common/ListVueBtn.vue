@@ -3,11 +3,11 @@
     <v-icon
       v-bind="props"
       size="small"
-      class="socialbtn"
+      class="socialBtn elevation-2"
       :color="!isHovering ? color : 'white'"
       :class="{
-        'bg-grey-lighten-4': !$store.state.darkMode,
-        'bg-grey-darken-3': $store.state.darkMode,
+        'bg-black': $store.state.darkMode,
+        'bg-white': !$store.state.darkMode,
       }"
     >
       {{ icon }}
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "VueBtn",
+  name: "ListVueBtn",
   props: {
     icon: {
       type: String,
@@ -27,23 +27,37 @@ export default {
       type: String,
     },
   },
+
+  /*created() {*/
+  /*  if (this.btnClass) {*/
+  //     for (let item of this.btnClass) {
+  //       this.classBtn.push(item);
+  //     }
+  //   }
+  //   if (this.theme.global.current.value.dark) {
+  //     this.classBtn.push("bg-black");
+  //   } else {
+  //     this.classBtn = this.classBtn.filter((x) => x !== "bg-black");
+  //   }
+  // },
 };
 </script>
 
 <style scoped>
-.socialbtn {
+.socialBtn {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   margin: 6px;
+  background: white;
   transition: 0.2s ease-in-out;
 }
-.socialbtn:hover {
+.socialBtn:hover {
   background: linear-gradient(0.25turn, #fa5252, #dd2476);
   color: white;
 }
-/*.socialbtn:hover {*/
+/*.socialBtn:hover {*/
 /*  --tw-gradient-from: #fa5252;*/
 /*  --tw-gradient-to: rgb(250 82 82 / 0);*/
 /*  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);*/

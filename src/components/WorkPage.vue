@@ -1,4 +1,6 @@
-<template>work</template>
+<template>
+  <h1>This is Work page(In Progress)</h1>
+</template>
 
 <script>
 export default {
