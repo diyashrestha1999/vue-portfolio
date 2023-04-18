@@ -1,5 +1,6 @@
 <template>
-  <v-app class="bg">
+  <v-app class="bg"
+         :class="{'darkBg': $store.state.darkMode}">
     <v-main>
       <app-bar v-if="$vuetify.display.md"></app-bar>
       <v-container
@@ -29,14 +30,11 @@
 </template>
 
 <script>
-// import AboutPage from "@/components/AboutPage.vue";
-// import VueBtn from "@/components/common/VueBtn.vue";
-// import VueTabs from "@/components/common/VueTabs.vue";
+
 import ProfileLeftBox from "@/components/ProfileLeftBox.vue";
 import TabRouter from "@/components/TabRouter.vue";
 import AppBar from "@/components/AppBar.vue";
-// import AppBar from "@/components/AppBar.vue";
-// import MainContainer from "@/components/MainContainer.vue";
+
 
 export default {
   name: "DefaultView",
@@ -44,11 +42,7 @@ export default {
     AppBar,
     TabRouter,
     ProfileLeftBox,
-    // VueTabs,
-    // VueBtn,
-    // AppBar,
-    // AboutPage,
-    // MainContainer,
+
   },
 };
 </script>
@@ -81,6 +75,16 @@ export default {
     no-repeat center center;
   background-size: cover;
   background-color: red;
+}
+.darkBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("@/assets/darkBg.jpg")
+    no-repeat center center;
+    background-size: cover;
 }
 
 .container {

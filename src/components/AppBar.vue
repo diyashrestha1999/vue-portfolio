@@ -8,7 +8,7 @@
       'bg-grey-lighten-3': $vuetify.display.md,
     }"
   >
-    --- {{ theme.global.current.value.dark }}
+<!--    -&#45;&#45; {{ theme.global.current.value.dark }}-->
     <div class="text-red-darken-1 logo"></div>
     <v-spacer></v-spacer>
     <v-hover v-slot="{ isHovering, props }">

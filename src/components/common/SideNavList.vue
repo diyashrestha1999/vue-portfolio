@@ -1,12 +1,9 @@
 <template>
   <div
     class="rounded-lg mx-6"
-    :class="[
-      theme.global.current.value.dark
-        ? 'bg-grey-darken-3'
-        : 'bg-grey-lighten-4',
-    ]"
+    :class="[$store.state.darkMode ? 'bg-grey-darken-3' : 'bg-grey-lighten-4']"
   >
+    <!--     -&#45;&#45; {{$store.state.darkMode}}-->
     <side-nav-list-row
       btn-icon="mdi-cellphone-sound"
       icon-color="pink-lighten-1"
@@ -48,18 +45,10 @@
 
 <script>
 import SideNavListRow from "@/components/common/SideNavListRow.vue";
-import { useTheme } from "vuetify";
 
 export default {
   name: "SideNavList",
   components: { SideNavListRow },
-  setup() {
-    const theme = useTheme();
-
-    return {
-      theme,
-    };
-  },
 };
 </script>
 

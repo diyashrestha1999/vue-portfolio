@@ -4,7 +4,8 @@
       flat
       class="tab text-center justify-center rounded-lg mx-2 pt-4"
       style="height: 5rem; width: 5rem"
-      :class="$route.name === route ? 'active-link' : ''"
+      :class="{'active-link':$route.name === route,
+      'bg-grey-darken-3':$store.state.darkMode }"
     >
       <v-icon size="20">{{ icon }}</v-icon>
       <p>{{ label }}</p>

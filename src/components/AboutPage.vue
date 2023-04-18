@@ -13,14 +13,26 @@
       </v-card-title>
       <v-spacer></v-spacer>
       <div v-if="$vuetify.display.lg">
-        <v-card-text class="text-blue-grey-darken-2">
-          I'm Creative Front-end developer from kathmandu, Australia, working in
-          web development and print media. I enjoy turning complex problems into
-          simple, beautiful and intuitive designs. My aim is to bring across
-          your message and identity in the most creative way. I created web
-          design for many famous brand companies.
+        <v-card-text
+          :class="[
+            $store.state.darkMode
+              ? 'text-grey-lighten-1'
+              : 'text-blue-grey-darken-2',
+          ]"
+        >
+          I'm Creative Front-end developer from kathmandu, working in web
+          development. I enjoy turning complex problems into simple, beautiful
+          and intuitive designs. My aim is to bring across your message and
+          identity in the most creative way. I created web design for many
+          famous brand companies.
         </v-card-text>
-        <v-card-text class="text-blue-grey-darken-2">
+        <v-card-text
+          :class="[
+            $store.state.darkMode
+              ? 'text-grey-lighten-1'
+              : 'text-blue-grey-darken-2',
+          ]"
+        >
           My aim is to bring across your message and identity in the most
           creative way. I created web design for many famous brand companies.
         </v-card-text>
@@ -51,135 +63,52 @@
       <v-spacer></v-spacer>
       <v-card-text>
         <v-row>
-          <v-col cols="6">
-            <v-card class="bg-purple-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-          <v-col cols="6">
-            <v-card class="bg-amber-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-
-          <v-col cols="6">
-            <v-card class="bg-purple-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-          <v-col cols="6">
-            <v-card class="bg-red-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-          <v-col cols="6">
-            <v-card class="bg-pink-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-          <v-col cols="6">
-            <v-card class="bg-blue-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-          <v-col cols="6">
-            <v-card class="bg-blue-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-          <v-col cols="6">
-            <v-card class="bg-blue-lighten-5 pa-4" flat>
-              <v-row no-gutters>
-                <v-col cols="2" class="text-right">
-                  <v-icon class="mt-3">mdi-xml</v-icon>
-                </v-col>
-                <v-col cols="10">
-                  <v-card-title>Ui/Ux Design </v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat.
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
+          <work-card
+            icon="mdi-xml"
+            icon-color="pink-lighten-2"
+            title="Ui/Ux Design"
+            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam euismod volutpat."
+            bg-color="bg-pink-lighten-5"
+          ></work-card>
+          <work-card
+            icon-color="blue-lighten-1"
+            icon="mdi-vuejs"
+            title="Vue.js"
+            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam euismod volutpat."
+            bg-color="bg-blue-lighten-4"
+          ></work-card>
+          <work-card
+            icon-color="cyan-lighten-2"
+            icon="mdi-code-json"
+            title="Java Script"
+            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam euismod volutpat."
+            bg-color="bg-cyan-lighten-4"
+          ></work-card>
+          <work-card
+            icon="mdi-pencil-ruler"
+            icon-color="purple-lighten-2"
+            title="Ui/Ux Design"
+            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam euismod volutpat."
+            bg-color="bg-purple-lighten-5"
+          ></work-card>
+          <work-card
+            icon="mdi-xml"
+            title="Ui/Ux Design"
+            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam euismod volutpat."
+            bg-color="bg-red-lighten-5"
+          ></work-card>
+          <work-card
+            icon="mdi-xml"
+            title="Ui/Ux Design"
+            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam euismod volutpat."
+            bg-color="bg-pink-lighten-5"
+          ></work-card>
         </v-row>
       </v-card-text>
       <v-spacer></v-spacer>
@@ -190,10 +119,11 @@
 <script>
 import VueBtn from "@/components/common/VueBtn.vue";
 import SideNavList from "@/components/common/SideNavList.vue";
+import WorkCard from "@/components/common/WorkCard.vue";
 
 export default {
   name: "AboutPage",
-  components: { SideNavList, VueBtn },
+  components: { WorkCard, SideNavList, VueBtn },
 };
 </script>
 
