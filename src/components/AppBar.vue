@@ -3,12 +3,13 @@
     style="margin-top: 20px; z-index: 1000; height: 75px"
     class="d-flex align-center"
     :class="{
-      'mt-0': $vuetify.display.md,
-      'px-4': $vuetify.display.md,
-      'bg-grey-lighten-3': $vuetify.display.md,
+      'mt-0': $vuetify.display.mdAndDown,
+      'px-4': $vuetify.display.mdAndDown,
+      'bg-grey-lighten-3': $vuetify.display.mdAndDown && !$store.state.darkMode,
+      'bg-black': $store.state.darkMode && $vuetify.display.mdAndDown,
     }"
   >
-<!--    -&#45;&#45; {{ theme.global.current.value.dark }}-->
+    <!--    -&#45;&#45; {{ theme.global.current.value.dark }}-->
     <div class="text-red-darken-1 logo"></div>
     <v-spacer></v-spacer>
     <v-hover v-slot="{ isHovering, props }">
@@ -18,7 +19,7 @@
         :color="isHovering ? 'red-lighten-1' : 'white'"
         size="small"
         class="mx-1"
-        :class="{ 'elevation-0': $vuetify.display.md }"
+        :class="{ 'elevation-0': $vuetify.display.mdAndDown }"
         @click="toggleDarkMode()"
       >
         <v-icon
@@ -39,7 +40,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
-        v-if="$vuetify.display.md"
+        v-if="$vuetify.display.mdAndDown"
         icon
         :color="isHovering ? 'red-lighten-1' : 'white'"
         size="small"

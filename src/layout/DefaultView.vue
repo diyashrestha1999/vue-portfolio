@@ -1,11 +1,9 @@
 <template>
-  <v-app class="bg"
-         :class="{'darkBg': $store.state.darkMode}">
+  <v-app class="bg" :class="{ darkBg: $store.state.darkMode }">
     <v-main>
-      <app-bar v-if="$vuetify.display.md"></app-bar>
+      <app-bar v-if="$vuetify.display.mdAndDown"></app-bar>
       <v-container
-        class="notice-side-view container justify-space-between"
-        v-if="$vuetify.display.lg"
+        class="notice-side-view container justify-space-between hidden-md-and-down"
       >
         <app-bar></app-bar>
         <v-row style="margin-top: 220px">
@@ -19,22 +17,19 @@
         </v-row>
       </v-container>
 
-      <template v-if="$vuetify.display.md">
+      <template v-if="$vuetify.display.mdAndDown">
         <router-view></router-view>
-        <v-footer class="d-flex justify-center">
-          © 2023 Diya Shrestha.
-        </v-footer>
+        <footer-below></footer-below>
       </template>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
 import ProfileLeftBox from "@/components/ProfileLeftBox.vue";
 import TabRouter from "@/components/TabRouter.vue";
 import AppBar from "@/components/AppBar.vue";
-
+import FooterBelow from "@/components/common/FooterBelow.vue";
 
 export default {
   name: "DefaultView",
@@ -42,7 +37,7 @@ export default {
     AppBar,
     TabRouter,
     ProfileLeftBox,
-
+    FooterBelow,
   },
 };
 </script>
@@ -76,15 +71,14 @@ export default {
   background-size: cover;
   background-color: red;
 }
-.darkBg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url("@/assets/darkBg.jpg")
-    no-repeat center center;
-    background-size: cover;
+.darkBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("@/assets/darkBg.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .container {

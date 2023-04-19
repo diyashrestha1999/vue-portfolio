@@ -35,20 +35,51 @@
   <v-col class="text-center">
     <v-btn
       class="my-4 rounded-xl bgColor text-capitalize"
-      @click="$router.push({ name: 'resume' })"
+      @click="downloadCv()"
     >
-      <v-icon size="x-large">mdi-eye-outline</v-icon>
-      View My CV
+      <v-icon size="x-large">mdi-download-outline</v-icon>
+      Download CV
     </v-btn>
   </v-col>
 </template>
 
 <script>
 import SideNavListRow from "@/components/common/SideNavListRow.vue";
+import axios from "axios";
 
 export default {
   name: "SideNavList",
   components: { SideNavListRow },
+  methods: {
+    downloadCv() {
+      axios({
+        url: "/assets/cv.pdf",
+        method: "GET",
+        responseType: "blob",
+      })
+        .then((response) => {
+          // Create a URL object from the blob
+          const url = window.URL.createObjectURL(new Blob([response.data]));
+
+          // Create a link element
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", "file.pdf");
+
+          // Append the link element to the document body
+          document.body.appendChild(link);
+
+          // Click the link to download the PDF file
+          link.click();
+
+          // Remove the link element from the document body
+          document.body.removeChild(link);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
 };
 </script>
 

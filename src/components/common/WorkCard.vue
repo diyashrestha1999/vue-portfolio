@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="6">
+  <v-col :cols="cols">
     <v-card
       class="pa-4"
       :class="[$store.state.darkMode ? '' : bgColor]"
@@ -7,25 +7,9 @@
       :style="$store.state.darkMode ? 'border: 2px  solid black' : ''"
       flat
     >
-      <v-row no-gutters>
-        <v-col cols="2" class="text-right">
-          <v-icon class="mt-3" :color="iconColor" size="x-large">
-            {{ icon }}
-          </v-icon>
-        </v-col>
-        <v-col cols="10">
-          <v-card-title>{{ title }}</v-card-title>
-          <v-card-text
-            :class="[
-              $store.state.darkMode
-                ? 'text-grey-lighten-1'
-                : 'text-blue-grey-darken-2',
-            ]"
-          >
-            {{ text }}
-          </v-card-text>
-        </v-col>
-      </v-row>
+      <v-img class="rounded-lg" cover :src="imgPath" :height="height"></v-img>
+      <v-card-subtitle class="pl-0 mt-4">{{ subtitle }}</v-card-subtitle>
+      <v-card-title class="pl-0">{{ title }}</v-card-title>
     </v-card>
   </v-col>
 </template>
@@ -34,20 +18,22 @@
 export default {
   name: "WorkCard",
   props: {
+    bgColor: { type: String, Required: true },
     title: {
       type: String,
       Required: true,
     },
-    text: {
+    subtitle: {
       type: String,
-      Required: true,
     },
-    icon: {
+    imgPath: {
       type: String,
-      Required: true,
     },
-    bgColor: { type: String, Required: true },
-    iconColor: {
+    cols: {
+      type: Number,
+      default: 6,
+    },
+    height: {
       type: String,
     },
   },

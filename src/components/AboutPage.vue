@@ -3,13 +3,13 @@
     <v-card
       flat
       :class="{
-        'rounded-0': $vuetify.display.md,
+        'rounded-0': $vuetify.display.mdAndDown,
       }"
       class="pa-4"
       style="border-radius: 1em"
     >
       <v-card-title>
-        <h2 class="after-effect after:left-52">About Me</h2>
+        <h2 class="after-effect">About Me</h2>
       </v-card-title>
       <v-spacer></v-spacer>
       <div v-if="$vuetify.display.lg">
@@ -63,55 +63,56 @@
       <v-spacer></v-spacer>
       <v-card-text>
         <v-row>
-          <work-card
+          <common-card
             icon="mdi-xml"
             icon-color="pink-lighten-2"
             title="Ui/Ux Design"
             text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam euismod volutpat."
             bg-color="bg-pink-lighten-5"
-          ></work-card>
-          <work-card
+          ></common-card>
+          <common-card
             icon-color="blue-lighten-1"
             icon="mdi-vuejs"
             title="Vue.js"
             text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam euismod volutpat."
             bg-color="bg-blue-lighten-4"
-          ></work-card>
-          <work-card
+          ></common-card>
+          <common-card
             icon-color="cyan-lighten-2"
             icon="mdi-code-json"
             title="Java Script"
             text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam euismod volutpat."
             bg-color="bg-cyan-lighten-4"
-          ></work-card>
-          <work-card
+          ></common-card>
+          <common-card
             icon="mdi-pencil-ruler"
             icon-color="purple-lighten-2"
             title="Ui/Ux Design"
             text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam euismod volutpat."
             bg-color="bg-purple-lighten-5"
-          ></work-card>
-          <work-card
+          ></common-card>
+          <common-card
             icon="mdi-xml"
             title="Ui/Ux Design"
             text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam euismod volutpat."
             bg-color="bg-red-lighten-5"
-          ></work-card>
-          <work-card
+          ></common-card>
+          <common-card
             icon="mdi-xml"
             title="Ui/Ux Design"
             text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam euismod volutpat."
             bg-color="bg-pink-lighten-5"
-          ></work-card>
+          ></common-card>
         </v-row>
       </v-card-text>
       <v-spacer></v-spacer>
+      <footer-below></footer-below>
     </v-card>
   </div>
 </template>
@@ -119,11 +120,12 @@
 <script>
 import VueBtn from "@/components/common/VueBtn.vue";
 import SideNavList from "@/components/common/SideNavList.vue";
-import WorkCard from "@/components/common/WorkCard.vue";
+import FooterBelow from "@/components/common/FooterBelow.vue";
+import CommonCard from "@/components/common/CommonCard.vue";
 
 export default {
   name: "AboutPage",
-  components: { WorkCard, SideNavList, VueBtn },
+  components: { FooterBelow, CommonCard, SideNavList, VueBtn },
 };
 </script>
 
