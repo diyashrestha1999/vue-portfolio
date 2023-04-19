@@ -78,7 +78,7 @@
         bg-color="bg-purple-lighten-5"
       ></common-card>
     </div>
-    <footer-below></footer-below>
+    <footer-below v-if="$vuetify.display.lgAndUp"></footer-below>
   </v-card>
 </template>
 

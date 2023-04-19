@@ -1,7 +1,7 @@
 <template>
   <v-col :cols="cols">
     <v-card
-      class="pa-4"
+      class="pa-5"
       :class="[$store.state.darkMode ? '' : bgColor]"
       style="border-radius: 0.8em"
       :style="$store.state.darkMode ? 'border: 2px  solid black' : ''"

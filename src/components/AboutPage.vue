@@ -112,7 +112,7 @@
         </v-row>
       </v-card-text>
       <v-spacer></v-spacer>
-      <footer-below></footer-below>
+      <footer-below v-if="$vuetify.display.lgAndUp"></footer-below>
     </v-card>
   </div>
 </template>

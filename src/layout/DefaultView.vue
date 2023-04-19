@@ -9,7 +9,7 @@
         <v-row style="margin-top: 220px">
           <profile-left-box></profile-left-box>
           <v-col cols="8">
-            <tab-router v-if="$vuetify.display.lg"></tab-router>
+            <tab-router v-if="$vuetify.display.lgAndUp"></tab-router>
             <div>
               <router-view></router-view>
             </div>

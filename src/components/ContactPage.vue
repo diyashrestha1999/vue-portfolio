@@ -7,7 +7,7 @@
     class="pa-4"
     style="border-radius: 1em"
   >
-    <footer-below></footer-below>
+    <footer-below v-if="$vuetify.display.lgAndUp"></footer-below>
   </v-card>
 </template>
 
