@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="6">
+  <v-col md="6" cols="12">
     <v-card
       class="pa-4"
       :class="[$store.state.darkMode ? '' : bgColor]"

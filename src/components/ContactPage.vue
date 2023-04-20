@@ -4,7 +4,7 @@
     :class="{
       'rounded-0': $vuetify.display.mdAndDown,
     }"
-    class="pa-4"
+    class="pa-10"
     style="border-radius: 1em"
   >
     <v-card-title>
@@ -48,7 +48,7 @@
             label="Message*"
             type="Text"
           ></v-text-field>
-          <v-btn outlined> Submit</v-btn>
+          <v-btn variant="outlined"> Submit</v-btn>
         </v-card-text>
       </div>
     </v-card-text>
