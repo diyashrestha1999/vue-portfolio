@@ -21,7 +21,21 @@
             subtitle=" 2021-2023 "
             bgColor="bg-red-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-            @click="openDialog = true"
+            @click="
+              openDialogBox(
+                'title',
+                'website',
+                'Photoshop, Figma',
+                'Envato',
+                'www.envato.com',
+                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
+                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
+                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
+                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
+                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
+                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+              )
+            "
           ></work-card>
           <work-card
             height="160px"
@@ -30,6 +44,21 @@
             subtitle=" 2021-2023 "
             bgColor="bg-indigo-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            @click="
+              openDialogBox(
+                'title',
+                'website',
+                'Photoshop, Figma',
+                'Envato',
+                'www.envato.com',
+                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
+                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
+                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
+                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
+                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
+                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+              )
+            "
           ></work-card>
           <work-card
             height="160px"
@@ -38,6 +67,21 @@
             subtitle=" 2021-2023 "
             bgColor="bg-blue-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            @click="
+              openDialogBox(
+                'title',
+                'website',
+                'Photoshop, Figma',
+                'Envato',
+                'www.envato.com',
+                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
+                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
+                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
+                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
+                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
+                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+              )
+            "
           ></work-card>
           <work-card
             height="165px"
@@ -46,6 +90,21 @@
             subtitle=" 2021-2023 "
             bgColor="bg-teal-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            @click="
+              openDialogBox(
+                'title',
+                'website',
+                'Photoshop, Figma',
+                'Envato',
+                'www.envato.com',
+                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
+                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
+                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
+                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
+                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
+                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+              )
+            "
           ></work-card>
         </v-col>
         <v-col cols="6">
@@ -56,6 +115,21 @@
             subtitle=" 2021-2023 "
             bgColor="bg-purple-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            @click="
+              openDialogBox(
+                'title',
+                'website',
+                'Photoshop, Figma',
+                'Envato',
+                'www.envato.com',
+                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
+                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
+                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
+                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
+                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
+                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+              )
+            "
           ></work-card>
           <work-card
             height="265px"
@@ -64,6 +138,21 @@
             subtitle=" 2021-2023 "
             bgColor="bg-orange-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            @click="
+              openDialogBox(
+                'title',
+                'website',
+                'Photoshop, Figma',
+                'Envato',
+                'www.envato.com',
+                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
+                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
+                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
+                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
+                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
+                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+              )
+            "
           ></work-card>
           <work-card
             height="265px"
@@ -72,18 +161,36 @@
             subtitle=" 2021-2023 "
             bgColor="bg-purple-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            @click="
+              openDialogBox(
+                'title',
+                'website',
+                'Photoshop, Figma',
+                'Envato',
+                'www.envato.com',
+                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
+                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
+                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
+                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
+                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
+                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+              )
+            "
           ></work-card>
         </v-col>
       </v-row>
     </v-card-text>
-    <v-dialog v-model="openDialog" width="500px">
-      <v-card>
-        <v-card-title class="d-flex">
-          title
-          <v-spacer> </v-spacer>
-          <v-icon @click="openDialog = false">mdi-close</v-icon>
-        </v-card-title>
-      </v-card>
+    <v-dialog v-model="openDialog" width="850px">
+      <work-dialog
+        @close="openDialog = $event"
+        :title="title"
+        :project="project"
+        :languages="languages"
+        :client="client"
+        :preview="preview"
+        :text="text"
+        :img="img"
+      ></work-dialog>
     </v-dialog>
     <footer-below v-if="$vuetify.display.lgAndUp"></footer-below>
   </v-card>
@@ -92,13 +199,33 @@
 <script>
 import FooterBelow from "@/components/common/FooterBelow.vue";
 import WorkCard from "@/components/common/WorkCard.vue";
+import WorkDialog from "@/components/common/WorkDialog.vue";
 export default {
   name: "WorkPage",
-  components: { WorkCard, FooterBelow },
+  components: { WorkDialog, WorkCard, FooterBelow },
   data() {
     return {
       openDialog: false,
+      title: "",
+      project: "",
+      languages: "",
+      client: "",
+      preview: "",
+      text: "",
+      img: "",
     };
+  },
+  methods: {
+    openDialogBox(title, project, languages, client, preview, text, img) {
+      this.title = title;
+      this.project = project;
+      this.languages = languages;
+      this.client = client;
+      this.preview = preview;
+      this.img = img;
+      this.text = text;
+      this.openDialog = true;
+    },
   },
 };
 </script>

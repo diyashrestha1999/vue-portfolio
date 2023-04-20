@@ -40,4 +40,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.imgWork {
+  transition: 0.3s;
+}
+.imgWork:hover {
+  transform: scale(1.03);
+}
+</style>
