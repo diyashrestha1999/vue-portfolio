@@ -68,8 +68,9 @@
           <v-hover>
             <v-list-item
               :class="{
+                'dark-hover': $store.state.darkMode,
+                'light-hover': !$store.state.darkMode,
                 'active-link': $route.name === item.route,
-                listHover: $route.name !== item.route,
               }"
               class="py-0 my-0"
               :prepend-icon="item.icon"
@@ -131,10 +132,16 @@ a {
 .active-link {
   color: #ef5350;
 }
-.listHover {
+.light-hover {
   color: #37474f;
 }
-.listHover:hover {
+.dark-hover {
+  color: white;
+}
+.dark-hover:hover {
+  color: #ef5350;
+}
+.light-hover:hover {
   color: #ef5350;
 }
 </style>
