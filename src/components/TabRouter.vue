@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-row-reverse mb-10">
-    <v-card class="d-flex flex px-8 py-7" style="border-radius: 16px">
+    <v-card class="d-flex flex px-8 py-7" style="border-radius: 16px" flat>
       <vue-tabs
         icon="mdi-account-outline"
         label="About"

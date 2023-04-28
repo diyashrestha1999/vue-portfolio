@@ -12,7 +12,7 @@
         <h2 class="after-effect">About Me</h2>
       </v-card-title>
       <v-spacer></v-spacer>
-      <div v-if="$vuetify.display.lg">
+      <div v-if="$vuetify.display.lgAndUp">
         <v-card-text
           :class="[
             $store.state.darkMode

@@ -14,11 +14,11 @@
     <v-spacer></v-spacer>
     <!--    <v-hover v-slot="{ isHovering, props }">-->
     <v-btn
+      flat
       icon
       color="red-lighten-1"
       size="small"
       class="mx-1"
-      :class="{ 'elevation-0': $vuetify.display.mdAndDown }"
       @click="toggleDarkMode()"
     >
       <v-icon

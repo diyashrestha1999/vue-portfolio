@@ -3,7 +3,7 @@
     <v-icon
       v-bind="props"
       size="small"
-      class="socialBtn elevation-2"
+      class="socialBtn"
       :color="!isHovering ? color : 'white'"
       :class="{
         'bg-black': $store.state.darkMode,
@@ -27,24 +27,14 @@ export default {
       type: String,
     },
   },
-
-  /*created() {*/
-  /*  if (this.btnClass) {*/
-  //     for (let item of this.btnClass) {
-  //       this.classBtn.push(item);
-  //     }
-  //   }
-  //   if (this.theme.global.current.value.dark) {
-  //     this.classBtn.push("bg-black");
-  //   } else {
-  //     this.classBtn = this.classBtn.filter((x) => x !== "bg-black");
-  //   }
-  // },
 };
 </script>
 
 <style scoped>
 .socialBtn {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px, 0 2px 4px -2px;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-shadow);
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 0.5rem;
