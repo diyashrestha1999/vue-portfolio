@@ -66,10 +66,8 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/organic-1280537_1280.jpg")
-    no-repeat center center;
+  background: url("@/assets/pink.jpg") no-repeat center center;
   background-size: cover;
-  background-color: red;
 }
 .darkBg {
   width: 100%;
@@ -77,7 +75,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("@/assets/darkBg.jpg") no-repeat center center;
+  background: url("@/assets/milad-dark.jpg") no-repeat center center;
   background-size: cover;
 }
 
