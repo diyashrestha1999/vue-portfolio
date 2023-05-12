@@ -12,30 +12,31 @@
     <!--    -&#45;&#45; {{ theme.global.current.value.dark }}-->
     <div class="text-red-darken-1 logo"></div>
     <v-spacer></v-spacer>
-    <!--    <v-hover v-slot="{ isHovering, props }">-->
-    <v-btn
-      flat
-      icon
-      color="red-lighten-1"
-      size="small"
-      class="mx-1"
-      @click="toggleDarkMode()"
-    >
-      <v-icon
-        v-if="!dark"
-        size="x-large"
-        class="ml-1 rotate"
-        icon="mdi-moon-waning-crescent"
-      ></v-icon>
-      <v-icon
-        v-else
-        size="x-large"
-        class="rotate"
-        icon="mdi-white-balance-sunny"
+    <v-hover v-slot="{ isHovering, props }">
+      <v-btn
+        flat
+        icon
+        size="small"
+        class="mx-1"
+        v-bind="props"
+        :color="isHovering ? 'red-lighten-1' : 'white'"
+        @click="toggleDarkMode()"
       >
-      </v-icon>
-    </v-btn>
-    <!--    </v-hover>-->
+        <v-icon
+          v-if="!dark"
+          size="x-large"
+          class="ml-1 rotate"
+          icon="mdi-moon-waning-crescent"
+        ></v-icon>
+        <v-icon
+          v-else
+          size="x-large"
+          class="rotate"
+          icon="mdi-white-balance-sunny"
+        >
+        </v-icon>
+      </v-btn>
+    </v-hover>
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
