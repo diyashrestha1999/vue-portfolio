@@ -66,7 +66,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("@/assets/pink.jpg") no-repeat center center;
+  background: url("@/assets/bg.jpg") no-repeat center center;
   background-size: cover;
 }
 .darkBg {
