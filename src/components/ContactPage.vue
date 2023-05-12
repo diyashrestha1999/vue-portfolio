@@ -29,27 +29,32 @@
         <v-card-subtitle class="py-0 text-black">
           <p>Please Fill Required Fields</p>
         </v-card-subtitle>
-        <v-card-text>
-          <v-text-field
-            variant="underlined"
-            v-model="password"
-            label="Name*"
-            type="Text"
-          ></v-text-field>
-          <v-text-field
-            variant="underlined"
-            v-model="password"
-            label="Email*"
-            type="Text"
-          ></v-text-field>
-          <v-text-field
-            variant="underlined"
-            v-model="password"
-            label="Message*"
-            type="Text"
-          ></v-text-field>
-          <v-btn variant="outlined"> Submit</v-btn>
-        </v-card-text>
+        <v-form ref="form">
+          <v-card-text>
+            <v-text-field
+              variant="underlined"
+              v-model="name"
+              label="Name*"
+              :rules="[(v) => !!v || 'Item is required']"
+              type="Text"
+            ></v-text-field>
+            <v-text-field
+              variant="underlined"
+              v-model="email"
+              label="Your email*"
+              type="email"
+              :rules="[(v) => !!v || 'Item is required'].concat(emailRules)"
+            ></v-text-field>
+            <v-text-field
+              variant="underlined"
+              v-model="password"
+              label="Message*"
+              type="Text"
+              :rules="[(v) => !!v || 'Item is required']"
+            ></v-text-field>
+            <v-btn variant="outlined" @click="submit()"> Submit</v-btn>
+          </v-card-text>
+        </v-form>
       </div>
     </v-card-text>
     <footer-below v-if="$vuetify.display.lgAndUp"></footer-below>
@@ -65,7 +70,15 @@ export default {
   data() {
     return {
       password: "",
+      email: "",
+      name: "",
+      emailRules: [(v) => /.+@.+/.test(v) || "E-mail must be valid"],
     };
+  },
+  methods: {
+    async submit() {
+      await this.$refs.form.validate();
+    },
   },
 };
 </script>
