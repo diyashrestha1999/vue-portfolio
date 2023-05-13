@@ -63,52 +63,20 @@
       <v-spacer></v-spacer>
       <v-card-text>
         <v-row>
-          <common-card
-            icon="mdi-xml"
-            icon-color="pink-lighten-2"
-            title="Ui/Ux Design"
-            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat."
-            bg-color="bg-pink-lighten-5"
-          ></common-card>
-          <common-card
-            icon-color="blue-lighten-1"
-            icon="mdi-vuejs"
-            title="Vue.js"
-            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat."
-            bg-color="bg-blue-lighten-4"
-          ></common-card>
-          <common-card
-            icon-color="cyan-lighten-2"
-            icon="mdi-code-json"
-            title="Java Script"
-            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat."
-            bg-color="bg-cyan-lighten-4"
-          ></common-card>
-          <common-card
-            icon="mdi-pencil-ruler"
-            icon-color="purple-lighten-2"
-            title="Ui/Ux Design"
-            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat."
-            bg-color="bg-purple-lighten-5"
-          ></common-card>
-          <common-card
-            icon="mdi-xml"
-            title="Ui/Ux Design"
-            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat."
-            bg-color="bg-red-lighten-5"
-          ></common-card>
-          <common-card
-            icon="mdi-xml"
-            title="Ui/Ux Design"
-            text=" Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam euismod volutpat."
-            bg-color="bg-pink-lighten-5"
-          ></common-card>
+          <v-col
+            cols="12"
+            sm="6"
+            v-for="(item, index) in cardDetail"
+            :key="index"
+          >
+            <common-card
+              :icon="item.icon"
+              :icon-color="item.iconColor"
+              :title="item.title"
+              :text="item.text"
+              :bg-color="item.bgColor"
+            ></common-card>
+          </v-col>
         </v-row>
       </v-card-text>
       <v-spacer></v-spacer>
@@ -122,10 +90,66 @@ import VueBtn from "@/components/common/VueBtn.vue";
 import SideNavList from "@/components/common/SideNavList.vue";
 import FooterBelow from "@/components/common/FooterBelow.vue";
 import CommonCard from "@/components/common/CommonCard.vue";
+import { ca } from "vuetify/locale";
 
 export default {
   name: "AboutPage",
+  computed: {
+    ca() {
+      return ca;
+    },
+  },
   components: { FooterBelow, CommonCard, SideNavList, VueBtn },
+  data() {
+    return {
+      cardDetail: [
+        {
+          icon: "mdi-vuejs",
+          iconColor: "teal-lighten-2",
+          title: "Ui/Ux Design",
+          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
+          bgColor: "bg-teal-lighten-5",
+        },
+        {
+          icon: "mdi-xml",
+          iconColor: "pink-lighten-2",
+          title: "Ui/Ux Design",
+          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
+          bgColor: "bg-pink-lighten-5",
+        },
+
+        {
+          icon: "mdi-code-json",
+          iconColor: "blue-lighten-2",
+          title: "Ui/Ux Design",
+          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
+          bgColor: "bg-blue-lighten-5",
+        },
+
+        {
+          icon: "mdi-xml",
+          iconColor: "red-lighten-2",
+          title: "Ui/Ux Design",
+          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
+          bgColor: "bg-red-lighten-5",
+        },
+        {
+          icon: "mdi-xml",
+          iconColor: "pink-lighten-2",
+          title: "Ui/Ux Design",
+          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
+          bgColor: "bg-pink-lighten-5",
+        },
+        {
+          icon: "mdi-pencil-ruler",
+          iconColor: "cyan-lighten-2",
+          title: "Ui/Ux Design",
+          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
+          bgColor: "bg-cyan-lighten-5",
+        },
+      ],
+    };
+  },
 };
 </script>
 

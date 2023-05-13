@@ -13,14 +13,14 @@
     <v-spacer></v-spacer>
     <v-card-text>
       <v-row>
-        <v-col cols="6">
+        <v-col sm="6" cols="12">
           <work-card
             height="160px"
             cols="12"
             title="Ph.D in Lorem ipsum"
             subtitle=" 2021-2023 "
             bgColor="bg-red-lighten-5"
-            img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            img-path="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
             @click="
               openDialogBox(
                 'title',
@@ -33,7 +33,7 @@
                   'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
                   'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
                   'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
-                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+                'https://cdn.vuetifyjs.com/images/cards/foster.jpg'
               )
             "
           ></work-card>
@@ -66,7 +66,7 @@
             title="Ph.D in Lorem ipsum"
             subtitle=" 2021-2023 "
             bgColor="bg-blue-lighten-5"
-            img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            img-path="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
             @click="
               openDialogBox(
                 'title',
@@ -79,7 +79,7 @@
                   'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
                   'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
                   'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
-                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+                'https://cdn.vuetifyjs.com/images/cards/foster.jpg'
               )
             "
           ></work-card>
@@ -107,7 +107,7 @@
             "
           ></work-card>
         </v-col>
-        <v-col cols="6">
+        <v-col sm="6" cols="12">
           <work-card
             height="265px"
             cols="12"
@@ -127,7 +127,7 @@
                   'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
                   'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
                   'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
-                'https://cdn.vuetifyjs.com/images/parallax/material.jpg'
+                'https://cdn.vuetifyjs.com/images/cards/foster.jpg'
               )
             "
           ></work-card>

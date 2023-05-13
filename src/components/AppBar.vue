@@ -60,25 +60,24 @@
       flat
     >
       <v-list>
-        <router-link
+        <v-list-item
           v-for="item in routes"
-          :to="{ name: item.route }"
           :key="item.route"
+          @click="
+            $router.push({ name: item.route });
+            showList = false;
+          "
+          :class="{
+            'text-white': $store.state.darkMode && $route.name !== item.route,
+            'text-grey-darken-2':
+              !$store.state.darkMode && $route.name !== item.route,
+            'text-red-lighten-1': $route.name === item.route,
+          }"
+          class="py-0 my-0"
+          :prepend-icon="item.icon"
+          :title="item.name"
         >
-          <v-hover>
-            <v-list-item
-              :class="{
-                'dark-hover': $store.state.darkMode,
-                'light-hover': !$store.state.darkMode,
-                'active-link': $route.name === item.route,
-              }"
-              class="py-0 my-0"
-              :prepend-icon="item.icon"
-              :title="item.name"
-            >
-            </v-list-item>
-          </v-hover>
-        </router-link>
+        </v-list-item>
       </v-list>
     </v-card>
   </v-expand-transition>
@@ -128,20 +127,5 @@ export default {
 }
 a {
   text-decoration: none;
-}
-.active-link {
-  color: #ef5350;
-}
-.light-hover {
-  color: #37474f;
-}
-.dark-hover {
-  color: white;
-}
-.dark-hover:hover {
-  color: #ef5350;
-}
-.light-hover:hover {
-  color: #ef5350;
 }
 </style>

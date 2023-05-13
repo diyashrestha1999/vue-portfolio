@@ -3,8 +3,8 @@
     flat
     :class="{
       'rounded-0': $vuetify.display.mdAndDown,
+      'pa-10': $vuetify.display.smAndUp,
     }"
-    class="pa-10"
     style="border-radius: 1em"
   >
     <v-card-title>
@@ -18,17 +18,25 @@
             : 'background-color:#FAFAFA '
         "
         style="border-radius: 0.8em"
-        class="pa-16"
+        :class="{ 'pa-16': $vuetify.display.smAndUp }"
       >
-        <v-card-subtitle class="font-weight-light text-h6 py-1">
-          I'm always open to discussing product
-        </v-card-subtitle>
-        <v-card-title class="py-0" style="font-weight: bold">
-          design work or partnerships.
-        </v-card-title>
-        <v-card-subtitle class="py-0 text-black">
-          <p>Please Fill Required Fields</p>
-        </v-card-subtitle>
+        <v-card-text
+          class="text-blue-grey-darken-2 py-0"
+          :class="{
+            ' pt-4': $vuetify.display.xs,
+            'text-grey-darken-2': $store.state.darkMode,
+          }"
+        >
+          <h2 class="font-weight-light">
+            I'm always open to discussing product
+          </h2>
+        </v-card-text>
+        <v-card-text style="font-weight: bold">
+          <h2>design work or partnerships.</h2>
+        </v-card-text>
+        <v-card-text class="py-0 text-grey-darken-1">
+          <span>Please Fill Required Fields</span>
+        </v-card-text>
         <v-form ref="form">
           <v-card-text>
             <v-text-field
@@ -63,9 +71,15 @@
 
 <script>
 import FooterBelow from "@/components/common/FooterBelow.vue";
+import vuetify from "@/plugins/vuetify";
 
 export default {
   name: "ContactPage",
+  computed: {
+    vuetify() {
+      return vuetify;
+    },
+  },
   components: { FooterBelow },
   data() {
     return {
