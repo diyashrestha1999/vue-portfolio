@@ -2,11 +2,16 @@
   <v-row class="mx-6">
     <v-col class="px-0 py-1">
       <v-row no-gutters class="d-flex justify-start align-center my-1">
-        <list-vue-btn :icon="btnIcon" :color="iconColor"></list-vue-btn>
+        <list-vue-btn
+          :icon="btnIcon"
+          :color="iconColor"
+          @copyText="copyText(title)"
+        ></list-vue-btn>
 
         <v-col cols="8">
           <v-list-item-subtitle>{{ subtitle }}</v-list-item-subtitle>
           <v-list-item-title>{{ title }}</v-list-item-title>
+          <input type="hidden" ref="testing-code" :value="title" />
         </v-col>
       </v-row>
       <v-divider v-if="divider"></v-divider>
@@ -32,6 +37,29 @@ export default {
     divider: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    copyText(val) {
+      console.log(val);
+      let testingCodeToCopy = this.$refs["testing-code"];
+      console.log("testingCodeToCopy", testingCodeToCopy);
+
+      testingCodeToCopy.setAttribute("type", "text"); // 不是 hidden 才能複製
+      testingCodeToCopy.select();
+      document.execCommand("copy");
+
+      // try {
+      //   const successful = document.execCommand("copy");
+      //   const msg = successful ? " successful" : "unsuccessful";
+      //   alert("Copied " + msg);
+      // } catch (err) {
+      //   alert("Oops, unable to copy");
+      // }
+
+      /* unselect the range */
+      testingCodeToCopy.setAttribute("type", "hidden");
+      window.getSelection().removeAllRanges();
     },
   },
 };

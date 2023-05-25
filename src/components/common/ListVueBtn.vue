@@ -1,23 +1,28 @@
 <template>
   <v-hover v-slot:default="{ isHovering, props }">
-    <v-icon
-      v-bind="props"
-      size="small"
-      class="socialBtn"
-      :color="!isHovering ? color : 'white'"
-      :class="{
-        'bg-black': $store.state.darkMode,
-        'bg-white': !$store.state.darkMode,
-      }"
-    >
-      {{ icon }}
-    </v-icon>
+    <div>
+      <v-icon
+        v-bind="props"
+        size="small"
+        class="socialBtn"
+        :color="!isHovering ? color : 'white'"
+        :class="{
+          'bg-black': $store.state.darkMode,
+          'bg-white': !$store.state.darkMode,
+        }"
+        @click="$emit('copyText')"
+      >
+        {{ icon }}
+      </v-icon>
+      <v-tooltip activator="parent" location="bottom">Copy</v-tooltip>
+    </div>
   </v-hover>
 </template>
 
 <script>
 export default {
   name: "ListVueBtn",
+  emits: ["copyText"],
   props: {
     icon: {
       type: String,
