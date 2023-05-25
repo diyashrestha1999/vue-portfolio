@@ -1,5 +1,6 @@
 <template>
   <v-card
+    height="300px"
     class="pa-4"
     :class="[$store.state.darkMode ? '' : bgColor]"
     style="border-radius: 0.8em"

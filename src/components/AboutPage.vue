@@ -21,10 +21,13 @@
           ]"
         >
           I'm Creative Front-end developer from kathmandu, working in web
-          development. I enjoy turning complex problems into simple, beautiful
-          and intuitive designs. My aim is to bring across your message and
-          identity in the most creative way. I created web design for many
-          famous brand companies.
+          development. My expertise is in Vue.js framework. I enjoy turning
+          complex problems into simple, beautiful and intuitive designs. My aim
+          is to bring across your message and identity in the most creative way.
+          As a Vue.js developer, I specialize in creating dynamic and
+          interactive web applications. With a passion for front-end development
+          and a keen eye for detail, I strive to deliver intuitive and seamless
+          user experiences.
         </v-card-text>
         <v-card-text
           :class="[
@@ -34,7 +37,7 @@
           ]"
         >
           My aim is to bring across your message and identity in the most
-          creative way. I created web design for many famous brand companies.
+          creative way. I created web design for many companies.
         </v-card-text>
       </div>
       <div v-else>
@@ -58,14 +61,14 @@
 
       <v-spacer></v-spacer>
       <v-card-title>
-        <h2 class="after-effect">What I do!</h2>
+        <h2 class="after-effect">My Skills</h2>
       </v-card-title>
       <v-spacer></v-spacer>
       <v-card-text>
         <v-row>
           <v-col
             cols="12"
-            sm="6"
+            md="6"
             v-for="(item, index) in cardDetail"
             :key="index"
           >
@@ -105,47 +108,46 @@ export default {
       cardDetail: [
         {
           icon: "mdi-vuejs",
+          iconColor: "green-lighten-2",
+          title: "Vue.js",
+          text:
+            " Proficiency in Vue.js and its core concepts (components, directives, state management, etc.).\n" +
+            "Experience with Vue CLI. Understanding of Vue Router for handling client-side routing. " +
+            "Knowledge of Vuex for managing application state.\n" +
+            "Understanding of RESTful APIs and AXIOS for data retrieval and manipulation.",
+          bgColor: "bg-green-lighten-5",
+        },
+
+        {
+          icon: "mdi-vuetify",
+          iconColor: "blue-lighten-2",
+          title: "Vuetify",
+          text:
+            " Proficiency in Vuetify.js and its components, directives, and theming capabilities.\n" +
+            "Understanding of Vuetify's grid system and responsive design principles.\n" +
+            "Knowledge of customizing and extending Vuetify components to meet specific project requirements.",
+          bgColor: "bg-blue-lighten-5",
+        },
+        {
+          icon: "mdi-language-javascript",
+          iconColor: "yellow-lighten-2",
+          title: "Javascript",
+          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
+          bgColor: "bg-yellow-lighten-5",
+        },
+        {
+          icon: "mdi-tailwind",
           iconColor: "teal-lighten-2",
-          title: "Ui/Ux Design",
+          title: "Tailwind",
           text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
           bgColor: "bg-teal-lighten-5",
         },
         {
-          icon: "mdi-xml",
-          iconColor: "pink-lighten-2",
-          title: "Ui/Ux Design",
+          icon: "mdi-nodejs",
+          iconColor: "light-green-lighten-2",
+          title: "Node.js",
           text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
-          bgColor: "bg-pink-lighten-5",
-        },
-
-        {
-          icon: "mdi-code-json",
-          iconColor: "blue-lighten-2",
-          title: "Ui/Ux Design",
-          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
-          bgColor: "bg-blue-lighten-5",
-        },
-
-        {
-          icon: "mdi-xml",
-          iconColor: "red-lighten-2",
-          title: "Ui/Ux Design",
-          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
-          bgColor: "bg-red-lighten-5",
-        },
-        {
-          icon: "mdi-xml",
-          iconColor: "pink-lighten-2",
-          title: "Ui/Ux Design",
-          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
-          bgColor: "bg-pink-lighten-5",
-        },
-        {
-          icon: "mdi-pencil-ruler",
-          iconColor: "cyan-lighten-2",
-          title: "Ui/Ux Design",
-          text: " Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam euismod volutpat.",
-          bgColor: "bg-cyan-lighten-5",
+          bgColor: "bg-light-green-lighten-5",
         },
       ],
     };
