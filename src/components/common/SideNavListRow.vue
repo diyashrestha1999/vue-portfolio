@@ -5,7 +5,7 @@
         <list-vue-btn
           :icon="btnIcon"
           :color="iconColor"
-          @copyText="copyText(title)"
+          @copyText="copyText()"
         ></list-vue-btn>
 
         <v-col cols="8">
@@ -40,10 +40,8 @@ export default {
     },
   },
   methods: {
-    copyText(val) {
-      console.log(val);
+    copyText() {
       let testingCodeToCopy = this.$refs["testing-code"];
-      console.log("testingCodeToCopy", testingCodeToCopy);
 
       testingCodeToCopy.setAttribute("type", "text"); // 不是 hidden 才能複製
       testingCodeToCopy.select();
