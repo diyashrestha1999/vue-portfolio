@@ -10,10 +10,26 @@
             Front-end Developer
           </span>
           <div class="d-flex justify-center my-2">
-            <vue-btn icon="mdi-instagram" color="pink-lighten-2"></vue-btn>
-            <vue-btn icon="mdi-linkedin" color="blue-darken-3"></vue-btn>
-            <vue-btn icon="mdi-facebook" color="blue-darken-2"></vue-btn>
-            <vue-btn icon="mdi-github" color="amber-accent-4"></vue-btn>
+            <vue-btn
+              icon="mdi-instagram"
+              color="pink-lighten-2"
+              url="https://www.instagram.com/diya966_/"
+            ></vue-btn>
+            <vue-btn
+              icon="mdi-linkedin"
+              color="blue-darken-3"
+              url="https://www.linkedin.com/in/diya-shrestha-04a3b91a3/"
+            ></vue-btn>
+            <vue-btn
+              icon="mdi-facebook"
+              color="blue-darken-2"
+              url="https://www.facebook.com/diya.stha.1023/"
+            ></vue-btn>
+            <vue-btn
+              icon="mdi-github"
+              color="amber-accent-4"
+              url="https://github.com/diyashrestha1999"
+            ></vue-btn>
           </div>
         </v-col>
         <side-nav-list></side-nav-list>
