@@ -1,7 +1,7 @@
 <template>
   <v-col cols="4">
     <div class="wrapper w-100">
-      <div class="green-box"></div>
+      <div class="profilePic-box"></div>
       <v-card class="dashed-box" flat></v-card>
       <v-card class="box" flat>
         <v-col class="text-center">
@@ -56,7 +56,7 @@ export default {
   /*background: white;*/
   border-radius: 20px;
 }
-.green-box {
+.profilePic-box {
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
   background: url("@/assets/avatar.jpg") no-repeat center center;
