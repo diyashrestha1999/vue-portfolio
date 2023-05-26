@@ -78,6 +78,7 @@
               :title="item.title"
               :text="item.text"
               :bg-color="item.bgColor"
+              @expand="skillDetail(item)"
             ></common-card>
           </v-col>
         </v-row>
@@ -85,6 +86,35 @@
       <v-spacer></v-spacer>
       <footer-below v-if="$vuetify.display.lgAndUp"></footer-below>
     </v-card>
+    <v-overlay v-model="expand" class="align-center justify-center">
+      <v-expand-x-transition>
+        <v-card
+          flat
+          v-show="expand"
+          :class="$store.state.darkMode ? '' : skill.bgColor"
+          max-width="500px"
+          :height="$vuetify.display.mdAndUp ? '200px' : ''"
+          class="pa-4"
+          style="border-radius: 0.8em"
+          :style="$store.state.darkMode ? 'border: 2px  solid black' : ''"
+        >
+          <v-row class="justify-space-between align-center" no-gutters>
+            <span class="d-flex align-center">
+              <v-icon :color="skill.iconColor">{{ skill.icon }}</v-icon>
+              <span>
+                <v-card-title :class="`text-${skill.iconColor}`">
+                  {{ skill.title }}
+                </v-card-title>
+              </span>
+            </span>
+            <v-icon color="pink" @click="expand = false">mdi-close </v-icon>
+          </v-row>
+          <v-card-text class="py-0 text-grey-darken-1 ml-6">
+            {{ skill.text }}
+          </v-card-text>
+        </v-card>
+      </v-expand-x-transition>
+    </v-overlay>
   </div>
 </template>
 
@@ -93,18 +123,14 @@ import VueBtn from "@/components/common/VueBtn.vue";
 import SideNavList from "@/components/common/SideNavList.vue";
 import FooterBelow from "@/components/common/FooterBelow.vue";
 import CommonCard from "@/components/common/CommonCard.vue";
-import { ca } from "vuetify/locale";
 
 export default {
   name: "AboutPage",
-  computed: {
-    ca() {
-      return ca;
-    },
-  },
+
   components: { FooterBelow, CommonCard, SideNavList, VueBtn },
   data() {
     return {
+      expand: false,
       cardDetail: [
         {
           icon: "mdi-vuejs",
@@ -150,7 +176,14 @@ export default {
           bgColor: "bg-light-green-lighten-5",
         },
       ],
+      skill: {},
     };
+  },
+  methods: {
+    skillDetail(item) {
+      this.expand = true;
+      this.skill = item;
+    },
   },
 };
 </script>
