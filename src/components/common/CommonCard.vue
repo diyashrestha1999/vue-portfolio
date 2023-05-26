@@ -25,7 +25,7 @@
         >
           {{ truncatedText }}
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions v-if="seeMore">
           <v-btn
             density="compact"
             icon="mdi-arrow-right"
@@ -44,6 +44,9 @@ export default {
   name: "CommonCard",
 
   props: {
+    seeMore: {
+      type: Boolean,
+    },
     subtitle: {
       type: String,
     },

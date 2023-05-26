@@ -79,6 +79,7 @@
               :text="item.text"
               :bg-color="item.bgColor"
               @expand="skillDetail(item)"
+              see-more
             ></common-card>
           </v-col>
         </v-row>
@@ -107,7 +108,15 @@
                 </v-card-title>
               </span>
             </span>
-            <v-icon color="pink" @click="expand = false">mdi-close </v-icon>
+
+            <v-card-actions>
+              <v-btn
+                density="compact"
+                icon="mdi-close"
+                color="pink"
+                @click="expand = false"
+              ></v-btn>
+            </v-card-actions>
           </v-row>
           <v-card-text class="py-0 text-grey-darken-1 ml-6">
             {{ skill.text }}
