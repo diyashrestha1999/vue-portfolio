@@ -4,13 +4,14 @@
       <v-row no-gutters class="d-flex justify-start align-center my-1">
         <list-vue-btn
           :icon="btnIcon"
-          @clickText="clickText()"
           :color="iconColor"
+          @copyText="copyText()"
         ></list-vue-btn>
 
         <v-col cols="8">
           <v-list-item-subtitle>{{ subtitle }}</v-list-item-subtitle>
-          <v-list-item-title ref="title">{{ title }}</v-list-item-title>
+          <v-list-item-title>{{ title }}</v-list-item-title>
+          <input type="hidden" ref="testing-code" :value="title" />
         </v-col>
       </v-row>
       <v-divider v-if="divider"></v-divider>
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-import ListVueBtn from0 "@/components/common/ListVueBtn.vue";
+import ListVueBtn from "@/components/common/ListVueBtn.vue";
 
 export default {
   name: "SideNavListRow",
@@ -39,11 +40,24 @@ export default {
     },
   },
   methods: {
-    clickText() {
-      // const element = this.$refs.text;
-      // element.select();
-      // element.setSelectionRange(0, 99999);
-      // document.execCommand("copy");
+    copyText() {
+      let testingCodeToCopy = this.$refs["testing-code"];
+
+      testingCodeToCopy.setAttribute("type", "text"); // 不是 hidden 才能複製
+      testingCodeToCopy.select();
+      document.execCommand("copy");
+
+      // try {
+      //   const successful = document.execCommand("copy");
+      //   const msg = successful ? " successful" : "unsuccessful";
+      //   alert("Copied " + msg);
+      // } catch (err) {
+      //   alert("Oops, unable to copy");
+      // }
+
+      /* unselect the range */
+      testingCodeToCopy.setAttribute("type", "hidden");
+      window.getSelection().removeAllRanges();
     },
   },
 };

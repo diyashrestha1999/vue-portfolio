@@ -9,6 +9,9 @@
         'bg-grey-lighten-4': !$store.state.darkMode,
         'bg-grey-darken-3': $store.state.darkMode,
       }"
+      href="https://www.instagram.com/diya966_/"
+      target="_blank"
+      @click="link(url)"
     >
       {{ icon }}
     </v-icon>
@@ -19,12 +22,20 @@
 export default {
   name: "VueBtn",
   props: {
+    url: {
+      type: String,
+    },
     icon: {
       type: String,
       Required: true,
     },
     color: {
       type: String,
+    },
+  },
+  methods: {
+    link(url) {
+      window.open(url, "_blank");
     },
   },
 };

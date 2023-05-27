@@ -16,14 +16,24 @@
         <v-card-subtitle>{{ subtitle }}</v-card-subtitle>
         <v-card-title>{{ title }}</v-card-title>
         <v-card-text
+          class="py-0"
           :class="[
             $store.state.darkMode
               ? 'text-grey-lighten-1'
               : 'text-blue-grey-darken-2',
           ]"
         >
-          {{ text }}
+          {{ truncatedText }}
         </v-card-text>
+        <v-card-actions v-if="seeMore">
+          <v-btn
+            density="compact"
+            icon="mdi-arrow-right"
+            flat
+            color="pink"
+            @click="$emit('expand')"
+          ></v-btn>
+        </v-card-actions>
       </v-col>
     </v-row>
   </v-card>
@@ -32,7 +42,11 @@
 <script>
 export default {
   name: "CommonCard",
+
   props: {
+    seeMore: {
+      type: Boolean,
+    },
     subtitle: {
       type: String,
     },
@@ -50,6 +64,23 @@ export default {
     bgColor: { type: String, Required: true },
     iconColor: {
       type: String,
+    },
+  },
+  computed: {
+    truncatedText() {
+      const length = 100;
+      const suffix = "...";
+      let truncatedText = "";
+
+      if (this.text === undefined) return;
+
+      if (this.text.length > length) {
+        truncatedText = this.text.substring(0, length) + suffix;
+      } else {
+        truncatedText = this.text.substring(0, length);
+      }
+
+      return truncatedText;
     },
   },
 };
