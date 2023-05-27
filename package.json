@@ -2,11 +2,12 @@
   "name": "vue-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://diyashrestha1999.github.io/vue-portfolio/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
-  },
+    },
   "dependencies": {
     "@mdi/font": "5.9.55",
     "axios": "^1.3.5",

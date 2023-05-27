@@ -12,6 +12,7 @@
     <!--    -&#45;&#45; {{ theme.global.current.value.dark }}-->
     <div class="text-red-darken-1 logo"></div>
     <v-spacer></v-spacer>
+
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         flat
@@ -23,7 +24,7 @@
         @click="toggleDarkMode()"
       >
         <v-icon
-          v-if="!dark"
+          v-if="!$store.state.darkMode"
           size="x-large"
           class="ml-1 rotate"
           icon="mdi-moon-waning-crescent"

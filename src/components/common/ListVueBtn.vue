@@ -9,6 +9,7 @@
         'bg-black': $store.state.darkMode,
         'bg-white': !$store.state.darkMode,
       }"
+      @click="$emit('clickText')"
     >
       {{ icon }}
     </v-icon>
@@ -26,6 +27,9 @@ export default {
     color: {
       type: String,
     },
+  },
+  methods: {
+    copyText() {},
   },
 };
 </script>
