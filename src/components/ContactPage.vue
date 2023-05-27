@@ -55,7 +55,7 @@
             ></v-text-field>
             <v-text-field
               variant="underlined"
-              v-model="password"
+              v-model="message"
               label="Message*"
               type="Text"
               :rules="[(v) => !!v || 'Item is required']"
@@ -83,7 +83,7 @@ export default {
   components: { FooterBelow },
   data() {
     return {
-      password: "",
+      message: "",
       email: "",
       name: "",
       emailRules: [(v) => /.+@.+/.test(v) || "E-mail must be valid"],
@@ -92,6 +92,9 @@ export default {
   methods: {
     async submit() {
       await this.$refs.form.validate();
+      window.location.href = `mailto:${"diyashrestha2000@gmail.com"}?subject=${encodeURIComponent(
+        "try"
+      )}&body=${encodeURIComponent(this.message)}`;
     },
   },
 };

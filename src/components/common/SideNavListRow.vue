@@ -47,15 +47,6 @@ export default {
       testingCodeToCopy.select();
       document.execCommand("copy");
 
-      // try {
-      //   const successful = document.execCommand("copy");
-      //   const msg = successful ? " successful" : "unsuccessful";
-      //   alert("Copied " + msg);
-      // } catch (err) {
-      //   alert("Oops, unable to copy");
-      // }
-
-      /* unselect the range */
       testingCodeToCopy.setAttribute("type", "hidden");
       window.getSelection().removeAllRanges();
     },
