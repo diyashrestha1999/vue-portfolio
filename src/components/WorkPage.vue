@@ -29,7 +29,7 @@
                 'None',
                 'https://diyashrestha1999.github.io/vue-portfolio/#/',
                 'By combining Vue.js with other modern web technologies such as Vuex, Vue Router, and Axios, ' +
-                  'I create have created this cohesive and well-structured portfolio. I also prioritize performance optimization and code efficiency,' +
+                  'I have created this cohesive and well-structured portfolio. I also prioritize performance optimization and code efficiency,' +
                   ' ensuring fast load times and smooth user interactions.',
                 require('@/assets/img_2.png')
               )

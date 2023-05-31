@@ -9,7 +9,6 @@
         'bg-grey-lighten-4': !$store.state.darkMode,
         'bg-grey-darken-3': $store.state.darkMode,
       }"
-      href="https://www.instagram.com/diya966_/"
       target="_blank"
       @click="link(url)"
     >
