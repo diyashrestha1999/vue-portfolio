@@ -1,11 +1,23 @@
 <template>
-  <v-app class="bg" :class="{ darkBg: $store.state.darkMode }">
+  <v-app
+    :class="{ darkBg: $store.state.darkMode, bg: $vuetify.display.lgAndUp }"
+  >
     <v-main>
       <app-bar v-if="$vuetify.display.mdAndDown"></app-bar>
+
       <v-container
         class="notice-side-view container justify-space-between hidden-md-and-down"
       >
         <app-bar></app-bar>
+        <v-alert
+          density="compact"
+          closable
+          border="start"
+          type="info"
+          title="In Progress"
+          text="This site is still in progress !"
+          variant="tonal"
+        ></v-alert>
         <v-row style="margin-top: 220px">
           <profile-left-box></profile-left-box>
           <v-col cols="8">
@@ -18,6 +30,16 @@
       </v-container>
 
       <template v-if="$vuetify.display.mdAndDown">
+        <v-alert
+          class="mt-6"
+          density="compact"
+          closable
+          border="start"
+          type="info"
+          title="In Progress"
+          text="This site is still in progress !"
+          variant="tonal"
+        ></v-alert>
         <router-view></router-view>
         <footer-below></footer-below>
       </template>
@@ -38,6 +60,11 @@ export default {
     TabRouter,
     ProfileLeftBox,
     FooterBelow,
+  },
+  data() {
+    return {
+      display: true,
+    };
   },
 };
 </script>

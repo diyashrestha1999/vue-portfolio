@@ -8,25 +8,32 @@
     <v-card-text>
       <v-row>
         <v-col md="6" cols="12" v-if="project">
-          <v-icon>mdi-school</v-icon>
-
-          Project : {{ project }}
+          <v-card-subtitle>
+            <v-icon>mdi-school</v-icon>
+            Project : {{ project }}
+          </v-card-subtitle>
         </v-col>
         <v-col md="6" cols="12" v-if="languages">
-          <v-icon>mdi-school</v-icon> Languages : {{ languages }}
+          <v-card-subtitle>
+            <v-icon>mdi-school</v-icon> Languages : {{ languages }}
+          </v-card-subtitle>
         </v-col>
         <v-col md="6" cols="12" v-if="client">
-          <v-icon>mdi-school</v-icon> Client : {{ client }}
+          <v-card-subtitle>
+            <v-icon>mdi-school</v-icon> Client : {{ client }}
+          </v-card-subtitle>
         </v-col>
         <v-col md="6" cols="12" v-if="preview">
-          <v-icon>mdi-school</v-icon> Preview :
-          <a
-            style="text-decoration: none"
-            class="text-teal-lighten-3"
-            :href="`https://${preview}`"
-            target="_blank"
-            >{{ preview }}</a
-          >
+          <v-card-subtitle>
+            <v-icon>mdi-school</v-icon> Preview :
+            <a
+              style="text-decoration: none"
+              class="text-teal-darken-3"
+              :href="preview"
+              target="_blank"
+              >{{ preview }}
+            </a>
+          </v-card-subtitle>
         </v-col>
       </v-row>
     </v-card-text>

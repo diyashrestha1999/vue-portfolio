@@ -17,30 +17,28 @@
           <work-card
             height="160px"
             cols="12"
-            title="Ph.D in Lorem ipsum"
-            subtitle=" 2021-2023 "
+            title="My Portfolio in Vue"
+            subtitle=" Made using Vuetify "
             bgColor="bg-red-lighten-5"
-            img-path="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+            :imgPath="require('@/assets/img_2.png')"
             @click="
               openDialogBox(
-                'title',
+                'My Portfolio in Vue',
                 'website',
-                'Photoshop, Figma',
-                'Envato',
-                'www.envato.com',
-                'lorem ipsum dolor sit amet consectetur, adipisicing elit. ' +
-                  'Mollitia placeat magnam possimus iusto blanditiis pariatur labore explicabo quo repellat hic ' +
-                  'dolorum numquam asperiores, voluptatum fugiat reiciendis aspernatur, non, odio aperiam voluptas ex ' +
-                  'tempora vitae. Dolor, consequatur quidem! Quas magni distinctio dolorum dolore natus, vel numquam ' +
-                  'accusamus. Nostrum eligendi recusandae qui tempore deserunt! ',
-                'https://cdn.vuetifyjs.com/images/cards/foster.jpg'
+                'Vue.js, JS',
+                'None',
+                'https://diyashrestha1999.github.io/vue-portfolio/#/',
+                'By combining Vue.js with other modern web technologies such as Vuex, Vue Router, and Axios, ' +
+                  'I create have created this cohesive and well-structured portfolio. I also prioritize performance optimization and code efficiency,' +
+                  ' ensuring fast load times and smooth user interactions.',
+                require('@/assets/img_2.png')
               )
             "
           ></work-card>
           <work-card
             height="160px"
             cols="12"
-            title="Ph.D in Lorem ipsum"
+            title="Blank"
             subtitle=" 2021-2023 "
             bgColor="bg-indigo-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
@@ -63,7 +61,7 @@
           <work-card
             height="160px"
             cols="12"
-            title="Ph.D in Lorem ipsum"
+            title="Blank"
             subtitle=" 2021-2023 "
             bgColor="bg-blue-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
@@ -86,7 +84,7 @@
           <work-card
             height="165px"
             cols="12"
-            title="Ph.D in Lorem ipsum"
+            title="Blank"
             subtitle=" 2021-2023 "
             bgColor="bg-teal-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
@@ -111,7 +109,7 @@
           <work-card
             height="265px"
             cols="12"
-            title="Ph.D in Lorem ipsum"
+            title="Blank"
             subtitle=" 2021-2023 "
             bgColor="bg-purple-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
@@ -134,7 +132,7 @@
           <work-card
             height="265px"
             cols="12"
-            title="Ph.D in Lorem ipsum"
+            title="Blank"
             subtitle=" 2021-2023 "
             bgColor="bg-orange-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
@@ -157,7 +155,7 @@
           <work-card
             height="265px"
             cols="12"
-            title="Ph.D in Lorem ipsum"
+            title="Blank"
             subtitle=" 2021-2023 "
             bgColor="bg-purple-lighten-5"
             img-path="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
